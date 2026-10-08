@@ -1,0 +1,178 @@
+:root {
+  --verde: #23402B;
+  --verde-claro: #DDE8C8;
+  --fondo: #F1F5EA;
+  --amarillo: #F2C230;
+  --texto: #1B2A1F;
+  --radio: 10px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Figtree", sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+  font-family: "Bricolage Grotesque", sans-serif;
+  line-height: 1.15;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 2px;
+}
+
+/* ---------- Header y navegación ---------- */
+.site-header {
+  background: var(--verde);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo { color: var(--amarillo); font-size: 1.6rem; font-weight: 800; text-decoration: none; }
+.nav-list { list-style: none; display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.nav-list a { color: #fff; text-decoration: none; font-weight: 500; }
+.nav-list a:hover { color: var(--amarillo); }
+
+/* ---------- Secciones ---------- */
+main > section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--verde); }
+
+.btn {
+  display: inline-block;
+  background: var(--amarillo);
+  color: var(--verde);
+  font: 700 1rem "Figtree", sans-serif;
+  padding: 0.8rem 1.6rem;
+  border: 0;
+  border-radius: var(--radio);
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { filter: brightness(0.95); }
+.btn-sm { padding: 0.5rem 1.1rem; font-size: 0.9rem; }
+
+/* ---------- Hero (background con degradado) ---------- */
+main > .hero {
+  max-width: none;
+  padding: 7rem 2rem;
+  text-align: left;
+  color: #fff;
+  background: linear-gradient(135deg, #23402B 0%, #2F6B3A 60%, #4C8A3F 100%);
+}
+.hero h1 { font-size: clamp(2.4rem, 7vw, 4.5rem); font-weight: 800; max-width: 14ch; }
+.hero p { max-width: 46ch; margin: 1rem 0 2rem; font-size: 1.15rem; }
+.hero > * { max-width: 1100px; }
+.hero { padding-left: max(2rem, calc((100% - 1100px) / 2)); }
+
+/* ---------- Productos (Flexbox) ---------- */
+.cards { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.card {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #fff;
+  border-radius: var(--radio);
+  padding: 1rem 1rem 1.25rem;
+}
+.card img { width: 100%; height: auto; border-radius: 6px; }
+.card .precio { font-weight: 700; font-size: 1.2rem; margin-top: auto; }
+.card .btn { align-self: flex-start; }
+
+/* ---------- Reseñas (Grid) ---------- */
+.resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
+  gap: 1.25rem;
+}
+.resena {
+  background: var(--verde-claro);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.resena cite { font-style: normal; font-weight: 600; color: var(--verde); }
+.resena-destacada {
+  grid-column: span 2;
+  grid-row: span 2;
+  background: var(--verde);
+  color: #fff;
+  font-size: 1.35rem;
+}
+.resena-destacada cite { color: var(--amarillo); }
+
+/* ---------- Ubicación (iframe) ---------- */
+.ubicacion p { margin-bottom: 1rem; }
+.ubicacion iframe {
+  width: 100%;
+  height: 340px;
+  border: 0;
+  border-radius: var(--radio);
+}
+
+/* ---------- Contacto (responsivo con media queries) ---------- */
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: start;
+}
+.contacto form { display: flex; flex-direction: column; gap: 0.5rem; }
+.contacto label { font-weight: 600; }
+.contacto input, .contacto textarea {
+  font: inherit;
+  padding: 0.7rem;
+  border: 2px solid var(--verde-claro);
+  border-radius: 8px;
+  background: #fff;
+}
+.contacto button { margin-top: 0.75rem; align-self: flex-start; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--verde);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- Media queries ---------- */
+@media (max-width: 900px) {
+  .resenas-grid { grid-template-columns: repeat(2, 1fr); }
+  .resena-destacada { grid-column: span 2; grid-row: auto; }
+}
+
+@media (max-width: 768px) {
+  .contacto { grid-template-columns: 1fr; gap: 1.5rem; }
+  .site-header { padding: 1rem; }
+  main > section { padding: 3rem 1rem; }
+  .contacto button { align-self: stretch; text-align: center; }
+}
+
+@media (max-width: 560px) {
+  .resenas-grid { grid-template-columns: 1fr; }
+  .resena-destacada { grid-column: auto; }
+  .nav-list { gap: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

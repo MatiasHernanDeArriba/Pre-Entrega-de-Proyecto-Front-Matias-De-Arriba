@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cebador: yerba, mates y bombillas para cebar mejor. Envíos a todo el país.">
+  <title>Cebador | Yerba, mates y bombillas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#inicio">Cebador</a>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#ubicacion">Dónde estamos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <h1>Todo para el mate de hoy</h1>
+      <p>Yerba de productores argentinos, mates curados y bombillas de acero. Envíos a todo el país.</p>
+      <a class="btn" href="#productos">Ver productos</a>
+    </section>
+
+    <section id="productos" class="productos">
+      <h2>Productos</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="img/yerba.svg" alt="Paquete de yerba mate" width="200" height="200">
+          <h3>Yerba Selva 1 kg</h3>
+          <p>Estacionada 18 meses, molienda media y sabor parejo.</p>
+          <p class="precio">$8.900</p>
+          <a class="btn btn-sm" href="#contacto">Consultar</a>
+        </article>
+        <article class="card">
+          <img src="img/mate.svg" alt="Mate de calabaza" width="200" height="200">
+          <h3>Mate de calabaza</h3>
+          <p>Curado y listo para usar, con base de cuero.</p>
+          <p class="precio">$12.500</p>
+          <a class="btn btn-sm" href="#contacto">Consultar</a>
+        </article>
+        <article class="card">
+          <img src="img/bombilla.svg" alt="Bombilla de acero inoxidable" width="200" height="200">
+          <h3>Bombilla de acero</h3>
+          <p>Filtro desmontable para limpiarla en dos minutos.</p>
+          <p class="precio">$6.300</p>
+          <a class="btn btn-sm" href="#contacto">Consultar</a>
+        </article>
+        <article class="card">
+          <img src="img/kit.svg" alt="Kit inicial de mate" width="200" height="200">
+          <h3>Kit inicial</h3>
+          <p>Mate, bombilla y 500 g de yerba. Ideal para regalar.</p>
+          <p class="precio">$24.900</p>
+          <a class="btn btn-sm" href="#contacto">Consultar</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="resenas" class="resenas">
+      <h2>Reseñas</h2>
+      <div class="resenas-grid">
+        <blockquote class="resena resena-destacada">
+          <p>Pedí el kit para regalar y llegó en tres días, bien embalado. Mi viejo ya me pidió otro.</p>
+          <cite>Lucía, Rosario</cite>
+        </blockquote>
+        <blockquote class="resena">
+          <p>La bombilla se limpia rapidísimo y no se tapa.</p>
+          <cite>Tomás, Córdoba</cite>
+        </blockquote>
+        <blockquote class="resena">
+          <p>La yerba tiene poco palo y rinde mucho.</p>
+          <cite>Marta, Mendoza</cite>
+        </blockquote>
+        <blockquote class="resena">
+          <p>Me respondieron la consulta en el día y me ayudaron a elegir el mate.</p>
+          <cite>Julián, La Plata</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="ubicacion" class="ubicacion">
+      <h2>Dónde estamos</h2>
+      <p>Retiro por el local en Buenos Aires, de lunes a sábado de 10 a 19 h.</p>
+      <iframe
+        title="Mapa de ubicación del local"
+        src="https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <div class="contacto-texto">
+        <h2>Contacto</h2>
+        <p>Escribinos para consultar stock, medios de pago o envíos. Respondemos en el día.</p>
+      </div>
+      <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Cebador. Proyecto de práctica, no es una tienda real.</p>
+  </footer>
+
+</body>
+</html>
