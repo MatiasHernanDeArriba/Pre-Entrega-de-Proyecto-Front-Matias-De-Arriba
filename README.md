@@ -13,7 +13,7 @@ Sitio web de un ecommerce de yerba, mates y bombillas. Proyecto de práctica de 
 
 ## Sitio publicado
 
-(https://matiashernandearriba.github.io/Pre-Entrega-de-Proyecto-Front-Matias-De-Arriba/)
+[Ver sitio publicado](https://matiashernandearriba.github.io/Pre-Entrega-de-Proyecto-Front-Matias-De-Arriba/)
 
 ## Cómo correrlo en local
 
